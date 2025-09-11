@@ -1,0 +1,20 @@
+name: Aufruf Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      deploy_path:
+        description: 'Pfad auf dem Server'
+        required: true
+        default: 'test/pfad'
+      platform:
+        description: 'Platform'
+        required: true
+        default: 'drupal-10.3.x-mws'
+
+jobs:
+  call-output:
+    uses: ./.github/workflows/output.yml
+    with:
+      deploy_path: ${{ github.event.inputs.deploy_path }}
+      platform: ${{ github.event.inputs.platform }}
