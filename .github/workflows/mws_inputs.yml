@@ -18,3 +18,5 @@ jobs:
     with:
       deploy_path: ${{ github.event.inputs.deploy_path }}
       platform: ${{ github.event.inputs.platform }}
+    secrets:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
