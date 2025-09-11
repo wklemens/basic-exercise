@@ -1,0 +1,22 @@
+name: Aufgerufener Workflow (Testausgabe)
+
+on:
+  workflow_call:
+    inputs:
+      deploy_path:
+        description: 'Pfad auf dem Server'
+        required: true
+        type: string
+      platform:
+        description: 'Platform'
+        required: true
+        type: string
+
+jobs:
+  print-inputs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show Inputs
+        run: |
+          echo "Deploy Path: ${{ inputs.deploy_path }}"
+          echo "Platform: ${{ inputs.platform }}"
