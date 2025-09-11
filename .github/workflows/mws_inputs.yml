@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       deploy_path:
-        description: 'Pfad auf dem Server'
+        description: 'JSON-Array der Server, z.B. ["mws11","mws13","mws15"]'
         required: true
         default: 'test/pfad'
       platform:
