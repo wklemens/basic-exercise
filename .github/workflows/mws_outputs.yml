@@ -11,6 +11,10 @@ on:
         description: 'Platform'
         required: true
         type: string
+    secrets:
+      GITHUB_TOKEN:
+        description: 'Default GitHub token'
+        required: true
 
 jobs:
   print-inputs:
