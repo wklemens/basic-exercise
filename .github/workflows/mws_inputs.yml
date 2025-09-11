@@ -10,7 +10,7 @@ on:
       platform:
         description: 'Platform'
         required: true
-        default: 'drupal-10.3.x-mws'
+        default: 'drupal'
 
 jobs:
   call-output:
@@ -18,5 +18,4 @@ jobs:
     with:
       deploy_path: ${{ github.event.inputs.deploy_path }}
       platform: ${{ github.event.inputs.platform }}
-    secrets:
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
