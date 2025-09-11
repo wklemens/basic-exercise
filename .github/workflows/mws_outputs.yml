@@ -17,10 +17,10 @@ on:
         required: true
 
 jobs:
-  print-inputs:
+  do-something:
     runs-on: ubuntu-latest
     steps:
-      - name: Show Inputs
+      - name: Show inputs
         run: |
-          echo "Deploy Path: ${{ inputs.deploy_path }}"
-          echo "Platform: ${{ inputs.platform }}"
+          echo "deploy_path=${{ inputs.deploy_path }}"
+          echo "platform=${{ inputs.platform }}"
