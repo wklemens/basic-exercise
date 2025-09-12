@@ -6,7 +6,7 @@ on:
       deploy_path:
         description: 'JSON-Array der Server, z.B. ["mws11","mws13","mws15"]'
         required: true
-        default: 'test/pfad'
+        default: '["mws11","mws13","mws15"]'
       platform:
         description: 'Platform'
         required: true
