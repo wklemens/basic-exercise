@@ -1,0 +1,19 @@
+name: Aufgerufener Workflow (Matrix-Ausgabe)
+
+on:
+  workflow_call:
+    inputs:
+      mws_list:
+        description: 'Liste von MWS'
+        required: true
+        type: string # Wichtig: als JSON übergeben, z.B. '["mws11","mws13","mws15"]'
+
+jobs:
+  ausgabe:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        mws: ${{ fromJson(inputs.mws_list) }}
+    steps:
+      - name: Matrix-Element ausgeben
+        run: echo "Aktuelles Element: ${{ matrix.mws }}"
