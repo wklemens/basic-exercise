@@ -3,10 +3,13 @@ name: Aufgerufener Workflow (Matrix-Ausgabe)
 on:
   workflow_call:
     inputs:
-      mws_list:
-        description: 'Liste von MWS'
+      deploy_path:
         required: true
-        type: string # Wichtig: als JSON übergeben, z.B. '["mws11","mws13","mws15"]'
+        type: string
+      platform:
+        required: true
+        type: string
+
 
 jobs:
   ausgabe:
