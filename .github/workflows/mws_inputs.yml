@@ -14,7 +14,7 @@ on:
 
 jobs:
   call-output:
-    uses: ./.github/workflows/mws_outputs_matrix.yml
+    uses: ./.github/workflows/mws_outputs_matrix.yml@main
     with:
       deploy_path: ${{ inputs.deploy_path }}
       platform: ${{ inputs.platform }}
