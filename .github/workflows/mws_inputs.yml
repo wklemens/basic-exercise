@@ -14,7 +14,7 @@ on:
 
 jobs:
   call-output:
-    uses: wklemens/basic-exercise/.github/workflows/mws_outputs_matrix.yml@main
+    uses: ./.github/workflows/mws_outputs_matrix.yml
     with:
       deploy_path: ${{ github.event.inputs.deploy_path }}
       platform: ${{ github.event.inputs.platform }}
