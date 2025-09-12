@@ -19,4 +19,4 @@ jobs:
         mws: ${{ fromJson(inputs.deploy_path) }}
     steps:
       - name: Matrix-Element ausgeben
-        run: echo "Aktuelles Element: ${{ matrix.mws }}"
+        run: echo "Aktuelles Element=${{ matrix.mws }}"
