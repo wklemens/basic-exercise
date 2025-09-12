@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        mws: ${{ fromJson(inputs.mws_list) }}
+        mws: ${{ fromJson(inputs.deploy_path) }}
     steps:
       - name: Matrix-Element ausgeben
         run: echo "Aktuelles Element: ${{ matrix.mws }}"
