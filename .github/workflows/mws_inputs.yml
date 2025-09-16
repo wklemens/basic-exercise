@@ -4,6 +4,10 @@ on:
   workflow_dispatch:
     inputs:
       deploy_path:
+        description: 'Serverpfad zum Ordner, z. B themes/custom/vk_olivero'
+        required: true
+        default: 'themes/custom/vk_olivero'
+      mws_server:
         description: 'JSON-Array der Server, z.B. ["mws11","mws13","mws15"]'
         required: true
         default: '["mws11","mws13","mws15"]'
