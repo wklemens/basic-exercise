@@ -22,3 +22,4 @@ jobs:
     with:
       deploy_path: ${{ inputs.deploy_path }}
       platform: ${{ inputs.platform }}
+      mws_server: ${{ inputs.mws_server }}
