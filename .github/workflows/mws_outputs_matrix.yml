@@ -6,6 +6,9 @@ on:
       deploy_path:
         required: true
         type: string
+      mws_server:
+        required: true
+        type: string
       platform:
         required: true
         type: string
@@ -23,3 +26,4 @@ jobs:
           echo "Aktuelles Element=${{ matrix.mws }}"
           echo "deploy_path=${{ inputs.deploy_path }}"
           echo "platform=${{ inputs.platform }}"
+          echo "mws_server=${{ inputs.mws_server }}"
