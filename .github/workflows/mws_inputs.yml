@@ -10,7 +10,7 @@ on:
       platform:
         description: 'Platform'
         required: true
-        default: 'drupal'
+        default: 'drupal-10.3.x-mws'
 
 jobs:
   call-output:
