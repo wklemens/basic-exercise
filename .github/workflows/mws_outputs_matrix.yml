@@ -22,3 +22,4 @@ jobs:
         run: |
           echo "Aktuelles Element=${{ matrix.mws }}"
           echo "deploy_path=${{ inputs.deploy_path }}"
+          echo "platform=${{ inputs.platform }}"
